@@ -1,6 +1,7 @@
-import CalendarStrip from 'react-native-calendar-strip';
+import CalendarStrip from 'react-native-calendar-strip'
 import moment from 'moment'
 import { GlobalStyles } from '../constants/style'
+import {View, text} from 'react-native'
 
 function CalendatSnippet() {
     return(
@@ -16,7 +17,7 @@ function CalendatSnippet() {
                 height:90, 
                 paddingTop: 10, 
                 paddingBottom: 10,
-                backgroundColor: GlobalStyles.colors.primaryColor
+                backgroundColor: 'white'
             }} 
         />
     )

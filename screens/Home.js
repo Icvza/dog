@@ -1,13 +1,14 @@
 import {View, Text, StyleSheet} from 'react-native'
 import { GlobalStyles } from '../constants/style'
 import moment from 'moment'
-import { CalendatSnippet } from '../components/CalendarStrip'
-import { FullDaySummary } from '../components/FullDayView'
-console.log(moment())
+import CalendatSnippet from '../components/CalendarStrip'
+import FullDaySummary from '../components/FullDayView/FullDayView'
+
+
 function Home() {
      return (
           <View>
-               <CalendatSnippet/> 
+               <CalendatSnippet/>
                <FullDaySummary/>
           </View>
      )

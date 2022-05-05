@@ -10,9 +10,9 @@ const BottomTabs = createBottomTabNavigator()
 function Overview() {
      return (
           <BottomTabs.Navigator screenOptions={{
-               headerStyle: { backgroundColor: GlobalStyles.colors.primaryColor},
+               headerStyle: { backgroundColor: 'white'},
                headerTintColor: GlobalStyles.colors.secondaryColor ,
-               tabBarStyle: { backgroundColor: GlobalStyles.colors.primaryColor},
+               tabBarStyle: { backgroundColor: 'white'},
                tabBarActiveTintColor: GlobalStyles.colors.secondaryColor
           }}
           >
