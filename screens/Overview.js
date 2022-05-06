@@ -1,9 +1,9 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { GlobalStyles } from '../constants/style'
+import { Ionicons } from '@expo/vector-icons'
 import Plan from './PlanScreen'
 import Home from './Home'
-import { GlobalStyles } from '../constants/style'
-import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes'
-import { Ionicons } from '@expo/vector-icons'
+import AllMeals from './AllMeals'
 
 const BottomTabs = createBottomTabNavigator()
 
@@ -30,6 +30,14 @@ function Overview() {
                options={{
                     tabBarIcon: ({color, size}) =>
                          <Ionicons name="calendar" size={size} color={color} />
+               }}
+               />
+               <BottomTabs.Screen 
+               name='All Meals' 
+               component={AllMeals}
+               options={{
+                    tabBarIcon: ({color, size}) => 
+                         <Ionicons name='fast-food-outline' size={size} color={color}/>
                }}
                />
           </BottomTabs.Navigator>

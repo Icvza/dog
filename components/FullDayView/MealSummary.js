@@ -1,12 +1,11 @@
 import { View, Text, StyleSheet } from 'react-native'
 
-function MealSummary( {typeOfMeal, meals} ){
+function MealSummary( {SummaryDiscription, meals} ){
 
     
     return(
         <View>
-            <Text>{typeOfMeal}</Text>
-            <Text>Yogurt</Text>
+            <Text>{SummaryDiscription}</Text>
         </View>
     )
 
