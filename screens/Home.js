@@ -16,7 +16,8 @@ function Home() {
 const styles = StyleSheet.create({
      Home: {
           backgroundColor: GlobalStyles.colors.primaryColor,
-     }
+     },
+
 })
 
 export default Home 
