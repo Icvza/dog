@@ -6,17 +6,23 @@ import FullDaySummary from '../components/FullDayView/FullDaySummary'
 
 function Home() {
      return (
-          <View>
+          <View style={styles.fullday}>
                <CalendatSnippet/>
-               <FullDaySummary SummaryDate={'Today'}/>
+               <FullDaySummary
+                    style={styles.fullday}
+                    SummaryDate={'Today'}
+               />
           </View>
      )
 }
 
 const styles = StyleSheet.create({
      Home: {
-          backgroundColor: GlobalStyles.colors.primaryColor,
+          backgroundColor: GlobalStyles.colors.primaryColor
      },
+     fullday: {
+          flex: 1
+     }
 
 })
 

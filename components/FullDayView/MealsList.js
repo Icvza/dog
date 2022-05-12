@@ -1,8 +1,9 @@
 import {FlatList,  Text } from 'react-native'
+import MealItem from './MealItems'
 
 function renderMeals(itemData){
     return(
-        <Text>{itemData.item.category}</Text>
+        <MealItem {...itemData.item}/>
     )
 }
 

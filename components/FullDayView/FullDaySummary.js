@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     container: {
         padding: 24,
         backgroundColor: GlobalStyles.colors.secondaryColor,
-        
+        flexGrow: 1
     }, 
 })
 

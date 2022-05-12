@@ -13,7 +13,7 @@ function Overview() {
                headerStyle: { backgroundColor: 'white'},
                headerTintColor: GlobalStyles.colors.secondaryColor ,
                tabBarStyle: { backgroundColor: 'white'},
-               tabBarActiveTintColor: GlobalStyles.colors.secondaryColor
+               tabBarActiveTintColor: GlobalStyles.colors.secondaryColor,
           }}
           >
                <BottomTabs.Screen 

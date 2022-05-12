@@ -1,17 +1,17 @@
 export const DUMMY_DATA =[
     {
-        id:'Egssju heard ',
-        ingredients: ['eggs','air'],
+        id:'Bacon Egg & Cheese',
+        ingredients: ['Eggs','Bread', 'Bacon'],
         category: 'Breakfast'
     },
     {
-        id:'PRFATT ',
-        ingredients: ['yogi','air'],
+        id:'Yogurt',
+        ingredients: ['Yogurt','Granola'],
         category: 'Snack'
     },
     {
-        id:'something ',
-        ingredients: ['oil','air'],
-        category: 'Dinner'
+        id:'Cereal',
+        ingredients: ['Milk','ceareal'],
+        category: 'Lunch'
     },
 ]
