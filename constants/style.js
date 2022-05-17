@@ -5,5 +5,11 @@ export const GlobalStyles = {
      },
 }
 
+export const APPNAME ={
+     name: {
+          nameMe: "APP_NAME"
+     }
+}
+
 
 //'#a3c1ad',

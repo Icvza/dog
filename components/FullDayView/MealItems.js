@@ -1,22 +1,19 @@
 import { View, Text, StyleSheet, Pressable} from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
 function MealItem({id, category, ingredients}){
 
-    function renderIng (ingredients){
-        console.log(ingredients.length)
-        for(const group of ingredients) {
-            console.log(ingredients)
-            console.log(group)
-                return (
-                    <Text>{group}</Text>
-                )
-        }
+    const navigation = useNavigation() 
+
+    function mealPressHandler (){
+        navigation.navigate('Plan')
     }
 
-
-
     return(
-        <Pressable>
+        <Pressable 
+            onPress={mealPressHandler} 
+            style={({pressed})=> pressed && styles.pressed}
+            >
             <View style={styles.container}>
                 <View>
                     <Text>{category}</Text>
@@ -36,6 +33,9 @@ function MealItem({id, category, ingredients}){
 export default MealItem
 
 const styles = StyleSheet.create({
+    pressed: {
+        opacity: 0.25
+    },
     container: {
         padding: 12,
         marginVertical: 8 ,
