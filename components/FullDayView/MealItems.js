@@ -6,7 +6,9 @@ function MealItem({id, category, ingredients}){
     const navigation = useNavigation() 
 
     function mealPressHandler (){
-        navigation.navigate('Plan')
+        navigation.navigate('ManageMeal', {
+            mealId: id
+        })
     }
 
     return(

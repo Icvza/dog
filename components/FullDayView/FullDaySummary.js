@@ -18,7 +18,7 @@ function FullDaySummary({meals, SummaryDate}) {
 const styles = StyleSheet.create({
     container: {
         padding: 24,
-        backgroundColor: GlobalStyles.colors.secondaryColor,
+        backgroundColor: 'white',
         flexGrow: 1
     }, 
 })

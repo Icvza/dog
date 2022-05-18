@@ -23,7 +23,7 @@ function Overview() {
                          size={30} 
                          color={tintColor}
                          onPress={ () => {
-                              navigation.navigate('Plan')
+                              navigation.navigate('ManageMeal')
                          }}
                          />,
                headerLeft: ({tintColor}) =>
