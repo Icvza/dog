@@ -5,10 +5,17 @@ import Plan from './PlanScreen'
 import Home from './Home'
 import AllMeals from './AllMeals'
 import IconButton from '../components/UI/IconButtons'
-
-
+import { createDrawerNavigator } from '@react-navigation/drawer'
 const BottomTabs = createBottomTabNavigator()
+const Drawer = createDrawerNavigator()
 
+function renderME () {
+     return (
+          <Drawer.Navigator>
+
+          </Drawer.Navigator>
+     )
+}
 function Overview() {
      return (
           <BottomTabs.Navigator
@@ -31,7 +38,9 @@ function Overview() {
                          icon='menu-outline' 
                          size={30} 
                          color={tintColor}
-                         onPress={ () => {}}
+                         onPress={() => {
+                              navigation.navigate('DrawerNav')
+                         }}
                     />,
                
           })}

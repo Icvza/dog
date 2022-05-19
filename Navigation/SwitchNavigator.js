@@ -2,11 +2,23 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Overview from '../screens/Overview'
 import ManageMeal from '../screens/ManageMeal'
-import { GlobalStyles } from '../constants/style'
+import 'react-native-gesture-handler';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import Random from '../screens/Random'
 const Stack = createNativeStackNavigator()
+const Drawer = createDrawerNavigator()
 
+function DrawerNav () {
+     return(
+          <Drawer.Navigator>
+               <Drawer.Screen 
+                    name='random'
+                    component={Random}
+               />
+          </Drawer.Navigator>
+     )
+}
 function SwitchNavigator(){
-
      return(
           <NavigationContainer>
                <Stack.Navigator screenOptions={{
@@ -24,6 +36,9 @@ function SwitchNavigator(){
                          options={{
                               presentation: 'modal'
                          }}
+                    />
+                    <Stack.Screen name='DrawerNav'
+                         component={DrawerNav}
                     />
                </Stack.Navigator>
           </NavigationContainer>
