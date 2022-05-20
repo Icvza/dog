@@ -5,46 +5,11 @@ import Plan from './PlanScreen'
 import Home from './Home'
 import AllMeals from './AllMeals'
 import IconButton from '../components/UI/IconButtons'
-import { createDrawerNavigator } from '@react-navigation/drawer'
 const BottomTabs = createBottomTabNavigator()
-const Drawer = createDrawerNavigator()
 
-function renderME () {
-     return (
-          <Drawer.Navigator>
-
-          </Drawer.Navigator>
-     )
-}
 function Overview() {
      return (
-          <BottomTabs.Navigator
-          screenOptions={({navigation}) =>({
-               headerStyle: { backgroundColor: 'white'},
-               headerTintColor: GlobalStyles.colors.secondaryColor ,
-               tabBarStyle: { backgroundColor: 'white'},
-               tabBarActiveTintColor: GlobalStyles.colors.secondaryColor,
-               headerRight: ({tintColor}) => 
-                    <IconButton 
-                         icon='add' 
-                         size={30} 
-                         color={tintColor}
-                         onPress={ () => {
-                              navigation.navigate('ManageMeal')
-                         }}
-                         />,
-               headerLeft: ({tintColor}) =>
-                    <IconButton
-                         icon='menu-outline' 
-                         size={30} 
-                         color={tintColor}
-                         onPress={() => {
-                              navigation.navigate('DrawerNav')
-                         }}
-                    />,
-               
-          })}
-          >
+          <BottomTabs.Navigator>
                <BottomTabs.Screen 
                name='Home' 
                component={Home}

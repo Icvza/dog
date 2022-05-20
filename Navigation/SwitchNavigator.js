@@ -1,31 +1,22 @@
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Overview from '../screens/Overview'
+import { useState } from 'react'
 import ManageMeal from '../screens/ManageMeal'
 import 'react-native-gesture-handler';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Random from '../screens/Random'
+import { overlayColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes'
 const Stack = createNativeStackNavigator()
-const Drawer = createDrawerNavigator()
 
-function DrawerNav () {
-     return(
-          <Drawer.Navigator>
-               <Drawer.Screen 
-                    name='random'
-                    component={Random}
-               />
-          </Drawer.Navigator>
-     )
-}
 function SwitchNavigator(){
      return(
           <NavigationContainer>
                <Stack.Navigator screenOptions={{
                     headerStyle: { backgroundColor: 'white' },
                     headerTintColor: 'white',
-                    headerTitleStyle: { color: 'black'}
-                    
+                    headerTitleStyle: { color: 'black'},
+                    initalRouteName: 'Overview'
                }}>
                     <Stack.Screen name='Overview'
                          component={Overview} 
@@ -38,7 +29,7 @@ function SwitchNavigator(){
                          }}
                     />
                     <Stack.Screen name='DrawerNav'
-                         component={DrawerNav}
+                         component={() => {}}
                     />
                </Stack.Navigator>
           </NavigationContainer>
