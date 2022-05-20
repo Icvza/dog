@@ -7,6 +7,7 @@ import 'react-native-gesture-handler';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Random from '../screens/Random'
 import { overlayColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes'
+
 const Stack = createNativeStackNavigator()
 
 function SwitchNavigator(){

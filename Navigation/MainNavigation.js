@@ -4,8 +4,27 @@ import Overview from '../screens/Overview';
 import ManageMeal from '../screens/ManageMeal';
 import { GlobalStyles } from '../constants/style';
 import IconButton from '../components/UI/IconButtons';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 const DrawerNav = createDrawerNavigator()
+const Stack = createNativeStackNavigator()
+
+function stackNav(){
+     return(
+          <Stack.Navigator>
+                    <Stack.Screen name='ManageMeal' 
+                         component={ManageMeal}
+                         options={{
+                              headerShown: false,
+                              presentation: 'modal',
+                              
+                         }}
+                    />
+          </Stack.Navigator>
+     )
+}
+
+
 
 function MainNavigator() {
      return(
@@ -24,7 +43,7 @@ function MainNavigator() {
                          onPress={ () => {
                               navigation.navigate('ManageMeal')
                          }}
-                         />,
+                    />,
                
           })}
           >
@@ -32,12 +51,12 @@ function MainNavigator() {
                          name={'overView'}
                          component={Overview}
                     />
-                    <DrawerNav.Screen name='ManageMeal' 
+                    <DrawerNav.Screen 
+                         name={'ManageMeal'}
                          component={ManageMeal}
                          options={{
                               presentation: 'modal',
                               headerShown: false
-                              
                          }}
                     />
                </DrawerNav.Navigator>

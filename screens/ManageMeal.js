@@ -14,7 +14,6 @@ function ManageMeal({route, navigation}) {
           })
      }, [navigation, isEditing])
 
-   
 
      function deleteMealItemHandler() {
           navigation.goBack()
@@ -59,7 +58,7 @@ export default ManageMeal
 const styles = StyleSheet.create({
      container: {
           flex: 1,
-          padding: 24,
+          padding: 80,
           backgroundColor: 'gray'
      },
      buttons: {
