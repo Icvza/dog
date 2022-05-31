@@ -2,7 +2,7 @@ import {View, StyleSheet} from 'react-native'
 import {useLayoutEffect} from 'react'
 import IconButton from '../components/UI/IconButtons'
 import Button from '../components/UI/Button'
-
+import AddItem from './itemForm'
 function ManageMeal({route, navigation}) {
 
      const editMealdid = route.params?.mealId
@@ -27,6 +27,9 @@ function ManageMeal({route, navigation}) {
      
      return(
           <View style={styles.container}>
+               <View>
+                    <AddItem />
+               </View>
                <View style={styles.buttons}>
                     <Button 
                          style={styles.button}
